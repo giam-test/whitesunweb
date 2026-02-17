@@ -3,21 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhiteSun | Ciencia de Datos e IA</title>
+    <title>WhiteSun | Ciencia de Datos e Inteligencia Artificial Estratégica</title>
+    <meta name="description" content="WhiteSun: 20 años transformando datos en inteligencia estratégica. Expertos en IA, Machine Learning y Data Science.">
     <style>
-        body { background-color: #0a192f; color: white; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; text-align: center; }
-        .card { border: 1px solid #64ffda; padding: 40px; border-radius: 10px; box-shadow: 0 0 20px rgba(100,255,218,0.2); }
-        h1 { color: #64ffda; margin-bottom: 20px; }
-        a { color: white; text-decoration: none; border: 1px solid white; padding: 10px 20px; border-radius: 5px; transition: 0.3s; }
-        a:hover { background: white; color: #0a192f; }
+        :root {
+            --bg-dark: #0a192f; 
+            --bg-secondary: #112240; 
+            --text-white: #ffffff; 
+            --text-gray: #a8b2d1; 
+            --accent-glow: #64ffda; 
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Segoe UI', Roboto, sans-serif; background-color: var(--bg-dark); color: var(--text-white); line-height: 1.6; }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 20px 0; }
+
+        /* Navegación */
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 5%; background-color: rgba(10, 25, 47, 0.95);
+            backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .logo { font-size: 1.6rem; font-weight: 700; display: flex; align-items: center; letter-spacing: 1px; }
+        .logo-icon {
+            height: 24px; width: 24px; background: white; border-radius: 50%;
+            margin-right: 12px; box-shadow: 0 0 15px rgba(255,255,255, 0.8);
+        }
+        nav ul { list-style: none; display: flex; gap: 25px; }
+        nav a { text-decoration: none; color: var(--text-gray); font-size: 0.9rem; text-transform: uppercase; transition: 0.3s; }
+        nav a:hover { color: var(--accent-glow); }
+
+        /* Hero */
+        #hero {
+            padding: 100px 5%; min-height: 60vh; display: flex; align-items: center;
+            background: radial-gradient(circle at top right, rgba(100,255,218,0.05), transparent);
+        }
+        #hero h1 { font-size: 3rem; line-height: 1.2; margin-bottom: 20px; max-width: 800px; }
+        .highlight { color: var(--accent-glow); }
+        #hero p { font-size: 1.2rem; color: var(--text-gray); max-width: 600px; margin-bottom: 30px; }
+
+        .btn {
+            display: inline-block; padding: 12px 28px; border: 2px solid var(--accent-glow);
+            color: var(--accent-glow); text-decoration: none; font-weight: 700;
+            border-radius: 4px; transition: 0.3s;
+        }
+        .btn:hover { background: rgba(100,255,218,0.1); transform: translateY(-3px); }
+
+        /* Servicios */
+        #servicios { padding: 80px 5%; background: var(--bg-secondary); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
+        .card { background: var(--bg-dark); padding: 30px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); transition: 0.3s; }
+        .card:hover { border-color: var(--accent-glow); transform: translateY(-5px); }
+        .card h3 { margin-bottom: 15px; color: var(--text-white); }
+        .card p { color: var(--text-gray); font-size: 0.95rem; }
+        .icon { margin-bottom: 20px; color: var(--accent-glow); width: 40px; }
+
+        /* Metodología */
+        #metodo { padding: 80px 5%; }
+        .steps { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 40px; }
+        .step { flex: 1; min-width: 250px; }
+        .num { font-size: 2rem; font-weight: 800; color: rgba(255,255,255,0.1); margin-bottom: 10px; }
+
+        /* Footer */
+        footer { padding: 80px 5%; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
+        .copy { margin-top: 40px; font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+
+        @media (max-width: 768px) { nav ul { display: none; } #hero h1 { font-size: 2.2rem; } }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>WhiteSun</h1>
-        <p>20 años transformando datos en inteligencia estratégica.</p>
-        <br><br>
-        <a href="mailto:info@whitesuntecnologia.com">Contactar Equipo</a>
-    </div>
+
+    <header>
+        <div class="logo"><div class="logo-icon"></div> WHITESUN</div>
+        <nav>
+            <ul>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#metodo">Metodología</a></li>
+                <li><a href="mailto:info@whitesuntecnologia.com">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h1><span class="highlight">20 años</span> transformando datos en inteligencia estratégica.</h1>
+            <p>Lideramos la evolución digital de empresas mediante Ciencia de Datos avanzada e Inteligencia Artificial de vanguardia.</p>
+            <a href="mailto:info@whitesuntecnologia.com" class="btn">Solicitar Auditoría</a>
+        </div>
+    </section>
+
+    <section id="servicios">
+        <div class="container">
+            <h2 style="font-size: 2rem;">Servicios de Alta Tecnología</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Inteligencia Artificial</h3>
+                    <p>Diseñamos modelos personalizados para transformar la operativa de tu empresa.</p>
+                </div>
+                <div class="card">
+                    <h3>Machine Learning</h3>
+                    <p>Sistemas que aprenden de forma automatizada para predecir comportamientos.</p>
+                </div>
+                <div class="card">
+                    <h3>Minería de Datos</h3>
+                    <p>Extraemos información útil y tendencias ocultas en grandes bases de datos.</p>
+                </div>
+                <div class="card">
+                    <h3>Ciencia de Datos</h3>
+                    <p>Rigor estadístico y matemático para interpretar correctamente tus activos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="metodo">
+        <div class="container">
+            <h2>Nuestra Metodología</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="num">01</div>
+                    <h3>Diseño</h3>
+                    <p>Analizamos y validamos la calidad de tus datos para idear soluciones estratégicas.</p>
+                </div>
+                <div class="step">
+                    <div class="num">02</div>
+                    <h3>Desarrollo</h3>
+                    <p>Ingeniería de datos dedicada a materializar soluciones robustas y escalables.</p>
+                </div>
+                <div class="step">
+                    <div class="num">03</div>
+                    <h3>Lanzamiento</h3>
+                    <p>Impulsamos la transformación digital para una empresa más eficiente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h2>¿Listo para el siguiente paso?</h2>
+            <p style="margin: 20px 0 30px; color: var(--text-gray);">Hablemos sobre cómo optimizar tu negocio con datos.</p>
+            <a href="mailto:info@whitesuntecnologia.com" class="btn">info@whitesuntecnologia.com</a>
+            <div class="copy">© 2026 WhiteSun Data Solutions. Dos décadas de trayectoria.</div>
+        </div>
+    </footer>
+
 </body>
 </html>
