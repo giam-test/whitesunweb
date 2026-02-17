@@ -3,202 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhiteSun | Ciencia de Datos e Inteligencia Artificial Estratégica</title>
-    <meta name="description" content="WhiteSun: 20 años transformando datos en inteligencia estratégica. Expertos en IA, Machine Learning, Minería de Datos y Transformación Digital.">
+    <title>WhiteSun | Ciencia de Datos e IA</title>
     <style>
-        :root {
-            --bg-dark: #0a192f; 
-            --bg-secondary: #112240; 
-            --text-white: #ffffff; 
-            --text-gray: #a8b2d1; 
-            --accent-glow: #64ffda; 
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-white);
-            line-height: 1.6;
-        }
-
-        h1, h2, h3 { color: var(--text-white); font-weight: 700; }
-        .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 20px 0; }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 5%;
-            background-color: rgba(10, 25, 47, 0.95);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--text-white);
-            display: flex;
-            align-items: center;
-            letter-spacing: 1px;
-        }
-
-        .logo-icon {
-            height: 32px;
-            width: 32px;
-            background: radial-gradient(circle, rgba(255,255,255,1) 30%, rgba(100,255,218,0.8) 100%);
-            border-radius: 50%;
-            margin-right: 12px;
-            box-shadow: 0 0 20px rgba(255,255,255, 0.6), 0 0 40px rgba(100,255,218, 0.3);
-            position: relative;
-        }
-
-        .logo-icon::after {
-            content: '';
-            position: absolute;
-            top: -4px; left: -4px; right: -4px; bottom: -4px;
-            border-radius: 50%;
-            border: 2px dotted rgba(255,255,255,0.3);
-            animation: spin 10s linear infinite;
-        }
-
-        @keyframes spin { 100% { transform: rotate(360deg); } }
-
-        nav ul { list-style: none; display: flex; gap: 30px; }
-        nav a {
-            text-decoration: none;
-            color: var(--text-gray);
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        nav a:hover { color: var(--accent-glow); }
-
-        #hero {
-            padding: 120px 5% 150px;
-            text-align: left;
-            background: linear-gradient(135deg, rgba(10,25,47,0.95) 0%, rgba(17,34,64,0.9) 100%), 
-                        url('https://www.transparenttextures.com/patterns/cubes.png');
-            background-blend-mode: overlay;
-            display: flex;
-            align-items: center;
-            min-height: 70vh;
-        }
-
-        .hero-content { max-width: 800px; }
-        #hero h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 25px; }
-        .highlight { color: var(--accent-glow); }
-        #hero p { font-size: 1.3rem; color: var(--text-gray); max-width: 650px; margin-bottom: 40px; }
-
-        .btn-primary {
-            display: inline-block;
-            padding: 15px 35px;
-            background-color: transparent;
-            color: var(--accent-glow);
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 4px;
-            border: 2px solid var(--accent-glow);
-            transition: all 0.3s ease;
-            letter-spacing: 1px;
-        }
-        .btn-primary:hover {
-            background-color: rgba(100, 255, 218, 0.1);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px -10px rgba(100,255,218, 0.5);
-        }
-
-        #servicios { padding: 100px 5%; background-color: var(--bg-secondary); position: relative; }
-        #servicios::before {
-            content: '';
-            position: absolute;
-            top: -50px; left: 0; width: 100%; height: 50px;
-            background: linear-gradient(to top, var(--bg-secondary), transparent);
-        }
-
-        .section-header { text-align: center; max-width: 700px; margin: 0 auto 60px; }
-        .section-title { font-size: 2.5rem; margin-bottom: 20px; }
-        .section-subtitle { color: var(--accent-glow); text-transform: uppercase; letter-spacing: 2px; font-weight: 700; font-size: 0.9rem; display: block; margin-bottom: 10px; }
-
-        .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
-        .servicio-card {
-            background-color: var(--bg-dark);
-            padding: 40px 30px;
-            border-radius: 12px;
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            border: 1px solid rgba(255,255,255,0.05);
-            box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
-            display: flex;
-            flex-direction: column;
-        }
-        .servicio-card:hover { border-color: var(--accent-glow); transform: translateY(-10px); }
-
-        .servicio-icon { margin-bottom: 25px; height: 60px; display: flex; align-items: center; }
-        .servicio-icon svg { width: 50px; height: 50px; stroke: var(--accent-glow); stroke-width: 1.5; fill: none; }
-        .servicio-card h3 { margin-bottom: 15px; font-size: 1.4rem; }
-        .servicio-card p { color: var(--text-gray); font-size: 1rem; flex-grow: 1; }
-
-        #metodologia { padding: 120px 5%; }
-        .metodologia-steps { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; margin-top: 70px; }
-        .step { flex: 1; min-width: 280px; padding: 30px; background: rgba(17, 34, 64, 0.5); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); }
-        .step-number { display: flex; justify-content: center; align-items: center; width: 70px; height: 70px; background-color: var(--bg-dark); color: var(--accent-glow); font-weight: 800; border-radius: 50%; font-size: 1.8rem; margin-bottom: 25px; border: 2px solid var(--accent-glow); }
-
-        footer { background-color: #060f1d; padding: 100px 5%; text-align: center; }
-        footer h2 { font-size: 2.5rem; margin-bottom: 25px; }
-        footer p { color: var(--text-gray); margin-bottom: 40px; font-size: 1.2rem; max-width: 600px; margin: 0 auto 40px; }
-        .copyright { margin-top: 80px; color: rgba(168, 178, 209, 0.4); font-size: 0.9rem; }
-
-        @media (max-width: 768px) { nav ul { display: none; } #hero h1 { font-size: 2.5rem; } }
+        body { background-color: #0a192f; color: white; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; text-align: center; }
+        .card { border: 1px solid #64ffda; padding: 40px; border-radius: 10px; box-shadow: 0 0 20px rgba(100,255,218,0.2); }
+        h1 { color: #64ffda; margin-bottom: 20px; }
+        a { color: white; text-decoration: none; border: 1px solid white; padding: 10px 20px; border-radius: 5px; transition: 0.3s; }
+        a:hover { background: white; color: #0a192f; }
     </style>
 </head>
 <body>
-
-    <header>
-        <div class="logo"><div class="logo-icon"></div>WHITESUN</div>
-        <nav>
-            <ul>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#metodologia">Metodología</a></li>
-                <li><a href="mailto:info@whitesuntecnologia.com" style="color: var(--accent-glow);">Auditoría</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="hero">
-        <div class="container hero-content">
-            <h1>20 años transformando datos en <span class="highlight">inteligencia estratégica</span>.</h1>
-            <p>Relanzamos WhiteSun. Combinamos dos décadas de solidez en ciencia de datos con la última tecnología en Inteligencia Artificial.</p>
-            <a href="mailto:info@whitesuntecnologia.com" class="btn-primary">Solicitar Auditoría de Datos</a>
-        </div>
-    </section>
-
-    <section id="servicios">
-        <div class="section-header">
-            <span class="section-subtitle">Qué hacemos</span>
-            <h2 class="section-title">Soluciones basadas en datos</h2>
-        </div>
-        <div class="container servicios-grid">
-            <div class="servicio-card">
-                <div class="servicio-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line><line x1="18" y1="6" x2="18.01" y2="6"></line><line x1="18" y1="18" x2="18.01" y2="18"></line><line x1="12" y1="10" x2="12" y2="14"></line><line x1="7" y1="10" x2="6" y2="14"></line><line x1="17" y1="10" x2="18" y2="14"></line><path d="M12 2v20"></path><path d="M2 12h20"></path></svg>
-                </div>
-                <h3>Inteligencia Artificial</h3>
-                <p>Modelos de IA personalizados para transformar la operativa de tu empresa.</p>
-            </div>
-            <div class="servicio-card">
-                <div class="servicio-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M12 8v4"></path><path d="M12 16h.01"></path></svg>
-                </div>
-                <h3>Machine Learning</h3>
-                <p>Algoritmos de aprendizaje automatizado para predecir comportamientos.</p>
-            </div>
-            <div class="servicio-card">
-                <div class="servicio-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+    <div class="card">
+        <h1>WhiteSun</h1>
+        <p>20 años transformando datos en inteligencia estratégica.</p>
+        <br><br>
+        <a href="mailto:info@whitesuntecnologia.com">Contactar Equipo</a>
+    </div>
+</body>
+</html>
